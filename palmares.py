@@ -8,7 +8,7 @@ st.write("""
 
 selected_year = st.sidebar.selectbox('Year',list((range(1958,2020)))) 
 
-data = pd.read_excel('Palmares.xlsx')
+data = pd.read_excel('D:/Admin/Desktop/Palmares.xlsx')
 
-st.write(data[data["Date d'adieu"].dt.year== int(selected_year)])
+st.write(data[data["Date d'adieu"].dt.year== int(selected_year)].iloc[:,1:])
 st.write(selected_year)
